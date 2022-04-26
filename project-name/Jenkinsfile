@@ -22,7 +22,7 @@ pipeline {
                 sh 'npm run build'
             }
 
-        }s
+        }
 
         stage('Test') {
 
