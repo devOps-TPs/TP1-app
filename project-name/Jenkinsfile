@@ -38,7 +38,7 @@ pipeline {
 
                 echo 'Deploying....'
 
-                serve -s dist
+                sh 'npm run start:prod'
 
             }
 
