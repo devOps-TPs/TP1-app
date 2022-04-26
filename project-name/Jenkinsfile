@@ -20,7 +20,6 @@ pipeline {
                 echo 'Building..'
 
                 sh 'npm run build'
-
             }
 
         }
