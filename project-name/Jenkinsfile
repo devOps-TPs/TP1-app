@@ -6,13 +6,18 @@ pipeline {
 
     stages {
 
+        stage('install') {
+            steps {
+                echo 'Installing...'
+                npm install
+            }
+        }
+
         stage('Build') {
 
             steps {
 
                 echo 'Building..'
-
-                npm install
 
                 sh 'npm run build'
 
