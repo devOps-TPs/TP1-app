@@ -8,7 +8,6 @@ pipeline {
 
         stage('install') {
             steps {
-                cd './project-name'
                 echo 'Installing...'
                 sh 'npm install'
             }
