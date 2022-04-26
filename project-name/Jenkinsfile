@@ -8,6 +8,7 @@ pipeline {
 
         stage('install') {
             steps {
+                cd project-name
                 echo 'Installing...'
                 sh 'npm install'
             }
@@ -22,7 +23,7 @@ pipeline {
                 sh 'npm run build'
             }
 
-        }
+        }s
 
         stage('Test') {
 
