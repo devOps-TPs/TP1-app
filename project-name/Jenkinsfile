@@ -1,0 +1,49 @@
+pipeline {
+
+    agent any
+
+
+
+    stages {
+
+        stage('Build') {
+
+            steps {
+
+                echo 'Building..'
+
+                npm install
+
+                npm run build
+
+            }
+
+        }
+
+        stage('Test') {
+
+            steps {
+
+                echo 'Testing..'
+
+                npm run test:e2e
+
+            }
+
+        }
+
+        stage('Deploy') {
+
+            steps {
+
+                echo 'Deploying....'
+
+                serve -s dist
+
+            }
+
+        }
+
+    }
+
+}
